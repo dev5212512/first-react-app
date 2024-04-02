@@ -3,13 +3,15 @@ import { useState } from "react";
 interface ListGroupProps {
   items: string[];
   heading: string;
+  onSelectedItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: ListGroupProps) {
+function ListGroup({ items, heading, onSelectedItem }: ListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const handleClick = (index: number) => {
     setSelectedIndex(index);
+    onSelectedItem(items[index]);
   };
   return (
     <>

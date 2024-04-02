@@ -3,11 +3,14 @@ import ListGroup from "./components/ListGroup";
 function App() {
   const cities = ["Tokoyo", "Paris", "London", "New York"];
   const arrays = ["1", "2", "3", "4"];
+  const handleSelectedItem = (item: string) => {
+    console.log(item)
+  }
 
   return (
     <div>
-      <ListGroup items={cities} heading="List of Cities" />
-      <ListGroup items={arrays} heading="List of Arrays" />
+      <ListGroup items={cities} heading="List of Cities" onSelectedItem={handleSelectedItem}/>
+      <ListGroup items={arrays} heading="List of Arrays" onSelectedItem={handleSelectedItem}/>
     </div>
   );
 }
