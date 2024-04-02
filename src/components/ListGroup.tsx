@@ -5,7 +5,7 @@ interface ListGroupProps {
   heading: string;
 }
 
-function ListGroup(props: ListGroupProps) {
+function ListGroup({ items, heading }: ListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const handleClick = (index: number) => {
@@ -13,9 +13,9 @@ function ListGroup(props: ListGroupProps) {
   };
   return (
     <>
-      <h1>{props.heading}</h1>
+      <h1>{heading}</h1>
       <ul className="list-group">
-        {props.items.map((item, index) => (
+        {items.map((item, index) => (
           <li
             className={
               selectedIndex == index
