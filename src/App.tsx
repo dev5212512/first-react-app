@@ -15,10 +15,7 @@ function App() {
         <b>Notification</b>
       </Alert>
 
-      <Button
-        onClick={() => console.log("button is clicked")}
-        color="secondary"
-      >
+      <Button onClick={() => console.log("button is clicked")}>
         my custom button
       </Button>
       <ListGroup
