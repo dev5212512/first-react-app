@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
@@ -9,15 +10,17 @@ function App() {
     console.log(item);
   };
 
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <div>
-      <Alert>
-        <b>Notification</b>
-      </Alert>
+      {isActive && (
+        <Alert onClose={()=>setIsActive(false)}>
+          <b>Notification</b>
+        </Alert>
+      )}
 
-      <Button onClick={() => console.log("button is clicked")}>
-        my custom button
-      </Button>
+      <Button onClick={() => setIsActive(true)}>my custom button</Button>
       <ListGroup
         items={cities}
         heading="List of Cities"
