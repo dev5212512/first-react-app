@@ -5,14 +5,22 @@ function App() {
   const cities = ["Tokoyo", "Paris", "London", "New York"];
   const arrays = ["1", "2", "3", "4"];
   const handleSelectedItem = (item: string) => {
-    console.log(item)
-  }
+    console.log(item);
+  };
 
   return (
     <div>
-      <Alert />
-      <ListGroup items={cities} heading="List of Cities" onSelectedItem={handleSelectedItem}/>
-      <ListGroup items={arrays} heading="List of Arrays" onSelectedItem={handleSelectedItem}/>
+      <Alert text="Gmail"/>
+      <ListGroup
+        items={cities}
+        heading="List of Cities"
+        onSelectedItem={handleSelectedItem}
+      />
+      <ListGroup
+        items={arrays}
+        heading="List of Arrays"
+        onSelectedItem={handleSelectedItem}
+      />
     </div>
   );
 }
