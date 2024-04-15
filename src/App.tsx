@@ -1,4 +1,5 @@
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
 
 function App() {
@@ -13,6 +14,13 @@ function App() {
       <Alert>
         <b>Notification</b>
       </Alert>
+
+      <Button
+        onClick={() => console.log("button is clicked")}
+        color="secondary"
+      >
+        my custom button
+      </Button>
       <ListGroup
         items={cities}
         heading="List of Cities"
