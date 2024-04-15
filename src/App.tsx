@@ -10,7 +10,9 @@ function App() {
 
   return (
     <div>
-      <Alert text="Gmail"/>
+      <Alert>
+        <b>Notification</b>
+      </Alert>
       <ListGroup
         items={cities}
         heading="List of Cities"
